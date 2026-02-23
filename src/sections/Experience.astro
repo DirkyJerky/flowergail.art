@@ -1,17 +1,87 @@
 ---
-import Roots from "../projects/Roots.astro";
-import Currents from "../projects/Currents.astro";
-import WeAllBloom from "../projects/WeAllBloom.astro";
-import GoghRoom from "../projects/GoghRoom.astro";
+import external_link from "../assets/external_link.svg";
+
+const experience: Array<{
+	title: string;
+	role: string;
+	attribution: string;
+	link?: string;
+}> = [
+	{
+		title: "City of Madison Asphalt Mural",
+		role: "Volunteer Co-Painter",
+		attribution: "Madison WI, 2025",
+		link: "https://madison.com/news/traffic/article_234d92a3-7a06-4ab0-96af-a24ebcb2a594.html",
+	},
+	{
+		title: "Anthology’s ICE OUT Postcard Project",
+		role: "Volunteer Contribution",
+		attribution: "Madison WI, 2026",
+		link: "https://www.anthologymadison.com/good-things-for-all-minnesota.html",
+	},
+	{
+		title: "Greetings from Kenosha Dino Postcard",
+		role: "Lettering, Painter",
+		attribution: "City of Kenosha Mural Project, 2025",
+		link: "https://www.visitkenosha.com/plan-your-visit/trip-ideas-and-itineraries/kenoshas-public-art-collection/",
+	},
+	{
+		title: "Aetherwave Music Videos",
+		role: "Set Design, Hair, and Makeup",
+		attribution: "2021-",
+		link: "https://youtu.be/g8efB0THJOA?si=PLU4aWeQ6uuNB0_b",
+	},
+	{
+		title: "Nursery Mural",
+		role: "Co-Artist and Painter with Nestle Hoeg",
+		attribution: "Madison WI, 2025",
+	},
+	{
+		title: "Flamingo Room",
+		role: "Co-Artist and Painter with Jenn Kuberka",
+		attribution: "Sauk City WI, 2025",
+	},
+	{
+		title: "STL Renaissance Faire",
+		role: "Creative Director, Set Builder, Props Designer, Site Crew, Painter",
+		attribution: "2022-2023",
+	},
+	{
+		title: "Cornerstone UMC",
+		role: "Creative Director, Set Design, Scenic Designer",
+		attribution: "O’Fallon, MO, 2016-2019",
+	},
+];
 ---
 
-<section id="projects" class="w-full space-y-8">
-	<h1 class="text-5xl font-bold text-center">Mural Highlights</h1>
-	<div>
-		<a
-			href="https://madison.com/news/traffic/article_234d92a3-7a06-4ab0-96af-a24ebcb2a594.html"
-			>City of Madison Asphalt Mural, Madison WI, 2025</a
-		>
-		<p>Volunteer Co-Painter</p>
+<section id="experience" class="w-full space-y-8">
+	<h1 class="text-5xl font-bold text-center">Experience</h1>
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 flex-wrap">
+		{
+			experience.map((item) => (
+				<div class="flex flex-row justify-between gap-4">
+					<div>
+						<p class="font-bold text-xl">{item.title}</p>
+						<p class="italic text-sm">{item.role}</p>
+						<p class="italic text-xs">{item.attribution}</p>
+					</div>
+					<div class="flex items-center">
+						{item.link && (
+							<a
+								href={item.link}
+								target="_blank"
+								class="w-8 h-8 items-center"
+							>
+								<img
+									src={external_link.src}
+									alt=""
+									class="w-full h-full"
+								/>
+							</a>
+						)}
+					</div>
+				</div>
+			))
+		}
 	</div>
 </section>
