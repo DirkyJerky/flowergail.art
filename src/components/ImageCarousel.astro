@@ -12,11 +12,12 @@ const { id, images } = Astro.props;
 >
     {
         images.map((image, index) => {
-            const prev = index > 0 ? index - 1 : images.length - 1;
-            const next = index < images.length - 1 ? index + 1 : 0;
+            const curr = index + 1;
+            const prev = index > 0 ? curr - 1 : images.length;
+            const next = curr < images.length ? curr + 1 : 1;
 
             return (
-                <div id={`${id}_slide${index}`} class="carousel-item img-slide">
+                <div id={`${id}_slide${curr}`} class="carousel-item img-slide">
                     <img src={image.src} class="rounded-box" />
                     <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href={`#${id}_slide${prev}`} class="btn btn-circle">
