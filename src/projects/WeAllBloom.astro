@@ -5,9 +5,11 @@ import wabwcd_1 from "../assets/art/murals/wabwcd/WABWCD best.jpg";
 import wabwcd_2 from "../assets/art/murals/wabwcd/WABWCD start.jpg";
 import wabwcd_3 from "../assets/art/murals/wabwcd/WABWCD.png";
 import wabwcd_4 from "../assets/art/murals/wabwcd/WABWCDtanding.png";
+import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectView
+    id="wabwcd"
     title="We All Bloom When Color Dances"
     role="Co-artist, painter"
     description=""
@@ -15,32 +17,8 @@ import wabwcd_4 from "../assets/art/murals/wabwcd/WABWCDtanding.png";
     project_type="Mural"
     attribution="Kenosha Creative Space, 2026"
 >
-    <div
-        class="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 max-h-full"
-    >
-        <div class="carousel-item w-fit">
-            <img
-                src={wabwcd_1.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={wabwcd_2.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={wabwcd_3.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={wabwcd_4.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-    </div>
+    <ImageCarousel
+        id="wabwcd"
+        images={[wabwcd_1, wabwcd_2, wabwcd_3, wabwcd_4]}
+    />
 </ProjectView>

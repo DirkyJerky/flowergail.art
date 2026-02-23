@@ -1,0 +1,46 @@
+---
+interface Props {
+    id: string;
+    images: ImageMetadata[];
+}
+
+const { id, images } = Astro.props;
+---
+
+<div
+    class="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 max-h-full"
+>
+    {
+        images.map((image, index) => {
+            const prev = index > 0 ? index - 1 : images.length - 1;
+            const next = index < images.length - 1 ? index + 1 : 0;
+
+            return (
+                <div id={`${id}_slide${index}`} class="carousel-item img-slide">
+                    <img src={image.src} class="rounded-box" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href={`#${id}_slide${prev}`} class="btn btn-circle">
+                            ❮
+                        </a>
+                        <a href={`#${id}_slide${next}`} class="btn btn-circle">
+                            ❯
+                        </a>
+                    </div>
+                </div>
+            );
+        })
+    }
+</div>
+
+<style>
+    .img-slide {
+        position: relative;
+        width: 100%;
+    }
+
+    .img-slide img {
+        margin-inline: auto;
+        height: auto;
+        object-fit: contain;
+    }
+</style>

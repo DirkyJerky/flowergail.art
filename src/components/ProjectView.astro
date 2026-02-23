@@ -1,5 +1,6 @@
 ---
 interface Props {
+    id: string;
     title: string;
     role: string;
     description: string;
@@ -8,13 +9,13 @@ interface Props {
     attribution: string;
 }
 
-const { title, role, description, image_url, project_type, attribution } =
+const { id, title, role, description, image_url, project_type, attribution } =
     Astro.props;
 ---
 
 <div
     class="card max-w-full bg-base-100 shadow-xl hover:bg-base-300 hover:scale-103 transition duration-200 ease-in-out cursor-pointer"
-    onclick={`document.getElementById('${title}').showModal()`}
+    onclick={`document.getElementById('${id}').showModal()`}
 >
     <figure>
         <img src={image_url} alt={title} />
@@ -28,7 +29,7 @@ const { title, role, description, image_url, project_type, attribution } =
         <span class="text-sm font-normal italic">{attribution}</span>
     </div>
 </div>
-<dialog id={title} class="modal">
+<dialog id={id} class="modal">
     <div
         class="modal-box w-11/12 max-w-screen h-5/6 max-h-screen flex flex-col space-y-4"
     >
@@ -42,3 +43,14 @@ const { title, role, description, image_url, project_type, attribution } =
         <button>close</button>
     </form>
 </dialog>
+
+<style>
+    .card {
+        background-color: #1e2624;
+        color: #dacad6;
+    }
+
+    .modal {
+        color: #dacad6;
+    }
+</style>

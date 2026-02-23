@@ -10,9 +10,11 @@ import gogh_6 from "../assets/art/murals/gogh/gogh jenn and I.png";
 import gogh_7 from "../assets/art/murals/gogh/gogh ladder.jpeg";
 import gogh_8 from "../assets/art/murals/gogh/gogh reach.jpg";
 import gogh_9 from "../assets/art/murals/gogh/gogh2.png";
+import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectView
+    id="gogh"
     title="Gogh Room"
     role="Co-artist, painter"
     description=""
@@ -20,62 +22,18 @@ import gogh_9 from "../assets/art/murals/gogh/gogh2.png";
     project_type="Mural"
     attribution="Private Commission, 2025"
 >
-    <div
-        class="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 max-h-full"
-    >
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_1.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_2.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_3.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_4.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_5.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_6.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_7.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_8.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={gogh_9.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-    </div>
+    <ImageCarousel
+        id="gogh"
+        images={[
+            gogh_1,
+            gogh_2,
+            gogh_3,
+            gogh_4,
+            gogh_5,
+            gogh_6,
+            gogh_7,
+            gogh_8,
+            gogh_9,
+        ]}
+    />
 </ProjectView>

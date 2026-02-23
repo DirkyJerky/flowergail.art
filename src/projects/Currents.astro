@@ -8,9 +8,11 @@ import currents_4 from "../assets/art/murals/currents/current sitting.png";
 import currents_5 from "../assets/art/murals/currents/currents sitting.jpg";
 import currents_6 from "../assets/art/murals/currents/currents stepstool.png";
 import currents_7 from "../assets/art/murals/currents/currents wheat.png";
+import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectView
+    id="currents"
     title="Currents"
     role="Assistant artist, painter"
     description=""
@@ -18,50 +20,16 @@ import currents_7 from "../assets/art/murals/currents/currents wheat.png";
     project_type="Mural"
     attribution="Kenosha Mural Project, Kenosha, WI, 2025"
 >
-    <div
-        class="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 max-h-full"
-    >
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_1.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_2.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_3.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_4.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_5.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_6.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={currents_7.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-    </div>
+    <ImageCarousel
+        id="currents"
+        images={[
+            currents_1,
+            currents_2,
+            currents_3,
+            currents_4,
+            currents_5,
+            currents_6,
+            currents_7,
+        ]}
+    />
 </ProjectView>

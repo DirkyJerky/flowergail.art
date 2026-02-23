@@ -11,9 +11,11 @@ import roots_7 from "../assets/art/murals/roots/roots reach.jpeg";
 import roots_8 from "../assets/art/murals/roots/roots sit.jpg";
 import roots_9 from "../assets/art/murals/roots/roots smiley done.png";
 import roots_10 from "../assets/art/murals/roots/roots tree.jpg";
+import ImageCarousel from "../components/ImageCarousel.astro";
 ---
 
 <ProjectView
+    id="roots"
     title="Roots of our Community"
     role="Assistant artist, painter, design collaborator"
     description=""
@@ -21,68 +23,19 @@ import roots_10 from "../assets/art/murals/roots/roots tree.jpg";
     project_type="Mural"
     attribution="Willy Street Co-Op, Madison WI, 2024"
 >
-    <div
-        class="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 max-h-full"
-    >
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_splash.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_2.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_3.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_4.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_5.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_6.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_7.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_8.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_9.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-        <div class="carousel-item w-fit">
-            <img
-                src={roots_10.src}
-                class="rounded-box object-contain w-full h-auto"
-            />
-        </div>
-    </div>
+    <ImageCarousel
+        id="roots"
+        images={[
+            roots_splash,
+            roots_2,
+            roots_3,
+            roots_4,
+            roots_5,
+            roots_6,
+            roots_7,
+            roots_8,
+            roots_9,
+            roots_10,
+        ]}
+    />
 </ProjectView>
