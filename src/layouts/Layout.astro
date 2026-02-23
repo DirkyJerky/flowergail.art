@@ -5,6 +5,7 @@ import heart_of_olbrich from "../assets/art/paintings/Heart of Olbrich, Digital,
 import Bio from "../sections/Bio.astro";
 import Highlights from "../sections/Highlights.astro";
 import Experience from "../sections/Experience.astro";
+import Gallery from "../sections/Gallery.astro";
 ---
 
 <body>
@@ -14,10 +15,13 @@ import Experience from "../sections/Experience.astro";
 		alt=""
 		fetchpriority="high"
 	/>
-	<main class="my-20 space-y-20">
+	<main
+		class="my-20 space-y-20 text-shadow-md text-shadow-color-#563b38 text-[#dacad6]"
+	>
 		<Bio />
 		<Highlights />
 		<Experience />
+		<Gallery />
 	</main>
 </body>
 
@@ -44,13 +48,7 @@ import Experience from "../sections/Experience.astro";
 			Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
 			sans-serif;
 
-		color: #dacad6;
-
 		max-width: min(100ch, 100% - 4rem);
 		margin-inline: auto;
-	}
-
-	main :global(h1) {
-		-webkit-text-stroke: 1px #563b38;
 	}
 </style>
