@@ -1,0 +1,44 @@
+---
+interface Props {
+    title: string;
+    role: string;
+    description: string;
+    image_url: string;
+    project_type: string;
+    attribution: string;
+}
+
+const { title, role, description, image_url, project_type, attribution } =
+    Astro.props;
+---
+
+<div
+    class="card max-w-full bg-base-100 shadow-xl hover:bg-base-300 hover:scale-103 transition duration-200 ease-in-out cursor-pointer"
+    onclick={`document.getElementById('${title}').showModal()`}
+>
+    <figure>
+        <img src={image_url} alt={title} />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">{title}</h2>
+        <p>{role}</p>
+    </div>
+    <div class="flex justify-between p-4">
+        <span class="text-sm font-medium italic">{project_type}</span>
+        <span class="text-sm font-normal italic">{attribution}</span>
+    </div>
+</div>
+<dialog id={title} class="modal">
+    <div
+        class="modal-box w-11/12 max-w-screen h-5/6 max-h-screen flex flex-col space-y-4"
+    >
+        <h3 class="text-lg font-bold">{title}</h3>
+        {description && <p class="text-sm italic">{description}</p>}
+        <div class="flex-1 min-h-0">
+            <slot />
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>

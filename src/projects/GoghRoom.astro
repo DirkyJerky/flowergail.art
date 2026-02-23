@@ -1,0 +1,81 @@
+---
+import ProjectView from "../components/ProjectView.astro";
+
+import gogh_1 from "../assets/art/murals/gogh/Gogh.png";
+import gogh_2 from "../assets/art/murals/gogh/gogh best.png";
+import gogh_3 from "../assets/art/murals/gogh/gogh door.png";
+import gogh_4 from "../assets/art/murals/gogh/gogh fullish.png";
+import gogh_5 from "../assets/art/murals/gogh/gogh good.png";
+import gogh_6 from "../assets/art/murals/gogh/gogh jenn and I.png";
+import gogh_7 from "../assets/art/murals/gogh/gogh ladder.jpeg";
+import gogh_8 from "../assets/art/murals/gogh/gogh reach.jpg";
+import gogh_9 from "../assets/art/murals/gogh/gogh2.png";
+---
+
+<ProjectView
+    title="Gogh Room"
+    role="Co-artist, painter"
+    description=""
+    image_url={gogh_2.src}
+    project_type="Mural"
+    attribution="Private Commission, 2025"
+>
+    <div
+        class="carousel carousel-center w-full bg-neutral rounded-box space-x-4 p-4 max-h-full"
+    >
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_1.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_2.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_3.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_4.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_5.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_6.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_7.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_8.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+        <div class="carousel-item w-fit">
+            <img
+                src={gogh_9.src}
+                class="rounded-box object-contain w-full h-auto"
+            />
+        </div>
+    </div>
+</ProjectView>
