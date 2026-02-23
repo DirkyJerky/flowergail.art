@@ -1,18 +1,140 @@
 ---
-import Roots from "../projects/Roots.astro";
-import Currents from "../projects/Currents.astro";
-import WeAllBloom from "../projects/WeAllBloom.astro";
-import GoghRoom from "../projects/GoghRoom.astro";
+import GalleryImage from "../components/GalleryImage.astro";
+
+import aether from "../assets/art/paintings/Aether, Digital, 2022.jpg";
+import self_portrait from "../assets/art/paintings/Self Portrait, Digital, 2023.jpg";
+import for_peace from "../assets/art/paintings/for peace, acrylic on canvas, 2026.jpg";
+import fern_garden from "../assets/art/paintings/fern garden, acrylic impasto, 2025.jpg";
+import aurora_com from "../assets/art/paintings/aurora com, 2023, digital.jpg";
+import neon from "../assets/art/paintings/neon, acrylic and marker on canvas, 2024.jpg";
+import garden_pearl from "../assets/art/paintings/garden pearl, watercolor, 2025.jpg";
+import flow from "../assets/art/paintings/flow.jpg";
+import life_on_mars from "../assets/art/paintings/life on mars, acrylic on canvas, 2026.jpg";
+import sharp from "../assets/art/paintings/Sharp, watercolor & Acrylic, 2022.jpg";
+import stillwater from "../assets/art/paintings/stillwater, acrylic on canvas, 2026.jpg";
+import squared from "../assets/art/paintings/squared, watercolor, 2022.jpg";
+import daze_portrait from "../assets/art/paintings/daze portrait, digital, 2023.jpg";
+import alexandra_kiddy from "../assets/art/paintings/Alexandra Kiddy, Digital, 2022.jpg";
+import canyon from "../assets/art/paintings/Canyon, 2024, Acrylic on Wood.jpg";
+import weeds from "../assets/art/paintings/weeds.jpg";
+import floating from "../assets/art/paintings/floating, acrylic, 2025.jpg";
+import cheers from "../assets/art/paintings/Cheers, Acrylic, 2025.jpg";
+import wildflowers from "../assets/art/paintings/wildflowers, acrylic on cavas, 2025.jpg";
+import sonata from "../assets/art/paintings/Sonata, Acrylic, 2025.jpg";
+import sherbert from "../assets/art/paintings/Sherbert, Acrylic, 2025.jpg";
+import sunshine_petals from "../assets/art/paintings/Sunshine Petals, Acrylic, 2025.jpg";
+import heart_of_olbrich from "../assets/art/paintings/Heart of Olbrich, Digital, 2024.jpg";
 ---
 
 <section id="gallery" class="w-full space-y-8">
 	<h1 class="text-5xl font-bold text-center">Gallery</h1>
-	<div class="grid grid-cols-1 md:grid-cols-2 max-w-full gap-4">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-			earum nemo dolores distinctio placeat, animi qui, facere expedita
-			quos laborum ipsam obcaecati debitis perspiciatis? Architecto
-			accusamus illum consequuntur odio veniam.
-		</p>
+	<div class="grid grid-cols-2 md:grid-cols-4 max-w-full gap-4">
+		<GalleryImage
+			id="aether"
+			title="Aether, Digital, 2022"
+			image={aether}
+		/>
+		<GalleryImage
+			id="self_portrait"
+			title="Self Portrait, Digital, 2023"
+			image={self_portrait}
+		/>
+		<GalleryImage
+			id="for_peace"
+			title="for peace, acrylic on canvas, 2026"
+			image={for_peace}
+		/>
+		<GalleryImage
+			id="fern_garden"
+			title="fern garden, acrylic impasto, 2025"
+			image={fern_garden}
+		/>
+		<GalleryImage
+			id="aurora_com"
+			title="aurora com, 2023, digital"
+			image={aurora_com}
+		/>
+		<GalleryImage
+			id="neon"
+			title="neon, acrylic and marker on canvas, 2024"
+			image={neon}
+		/>
+		<GalleryImage
+			id="garden_pearl"
+			title="garden pearl, watercolor, 2025"
+			image={garden_pearl}
+		/>
+		<GalleryImage id="flow" title="flow" image={flow} />
+		<GalleryImage
+			id="life_on_mars"
+			title="life on mars, acrylic on canvas, 2026"
+			image={life_on_mars}
+		/>
+		<GalleryImage
+			id="sharp"
+			title="Sharp, watercolor & Acrylic, 2022"
+			image={sharp}
+		/>
+		<GalleryImage
+			id="stillwater"
+			title="stillwater, acrylic on canvas, 2026"
+			image={stillwater}
+		/>
+		<GalleryImage
+			id="squared"
+			title="squared, watercolor, 2022"
+			image={squared}
+		/>
+		<GalleryImage
+			id="daze_portrait"
+			title="daze portrait, digital, 2023"
+			image={daze_portrait}
+		/>
+		<GalleryImage
+			id="alexandra_kiddy"
+			title="Alexandra Kiddy, Digital, 2022"
+			image={alexandra_kiddy}
+		/>
+		<GalleryImage
+			id="canyon"
+			title="Canyon, 2024, Acrylic on Wood"
+			image={canyon}
+		/>
+		<GalleryImage id="weeds" title="weeds" image={weeds} />
+		<GalleryImage
+			id="floating"
+			title="floating, acrylic, 2025"
+			image={floating}
+		/>
+		<GalleryImage
+			id="cheers"
+			title="Cheers, Acrylic, 2025"
+			image={cheers}
+		/>
+		<GalleryImage
+			id="wildflowers"
+			title="wildflowers, acrylic on cavas, 2025"
+			image={wildflowers}
+		/>
+		<GalleryImage
+			id="sonata"
+			title="Sonata, Acrylic, 2025"
+			image={sonata}
+		/>
+		<GalleryImage
+			id="sherbert"
+			title="Sherbert, Acrylic, 2025"
+			image={sherbert}
+		/>
+		<GalleryImage
+			id="sunshine_petals"
+			title="Sunshine Petals, Acrylic, 2025"
+			image={sunshine_petals}
+		/>
+		<GalleryImage
+			id="heart_of_olbrich"
+			title="Heart of Olbrich, Digital, 2024"
+			image={heart_of_olbrich}
+		/>
 	</div>
 </section>
