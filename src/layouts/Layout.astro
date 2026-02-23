@@ -1,23 +1,56 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Flowergail</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import background from "../assets/background.svg";
+import heart_of_olbrich from "../assets/art/paintings/Heart of Olbrich, Digital, 2024.jpg";
 
-<style>
-	html,
+import Bio from "../components/Bio.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<body>
+	<img
+		id="background"
+		src={heart_of_olbrich.src}
+		alt=""
+		fetchpriority="high"
+	/>
+	<main>
+		<Bio />
+		<Projects />
+	</main>
+</body>
+
+<style scoped>
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
 	}
+
+	#background {
+		position: fixed;
+		opacity: 50%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(20px);
+	}
+
+	main {
+		font-family:
+			Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
+			sans-serif;
+
+		max-width: min(90ch, 100% - 4rem);
+		margin-inline: auto;
+
+		padding-bottom: 20px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
 </style>
+
+<style></style>
