@@ -3,7 +3,8 @@ import background from "../assets/background.svg";
 import heart_of_olbrich from "../assets/art/paintings/Heart of Olbrich, Digital, 2024.jpg";
 
 import Bio from "../sections/Bio.astro";
-import Projects from "../sections/Projects.astro";
+import Highlights from "../sections/Highlights.astro";
+import Experience from "../sections/Experience.astro";
 ---
 
 <body>
@@ -13,13 +14,14 @@ import Projects from "../sections/Projects.astro";
 		alt=""
 		fetchpriority="high"
 	/>
-	<main class="my-20 space-y-10">
+	<main class="my-20 space-y-20">
 		<Bio />
-		<Projects />
+		<Highlights />
+		<Experience />
 	</main>
 </body>
 
-<style scoped>
+<style>
 	body {
 		margin: 0;
 		width: 100%;
@@ -42,15 +44,9 @@ import Projects from "../sections/Projects.astro";
 			Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
 			sans-serif;
 
+		color: #dacad6;
+
 		max-width: min(100ch, 100% - 4rem);
 		margin-inline: auto;
-
-		padding-bottom: 20px;
-
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
 	}
 </style>
-
-<style></style>
