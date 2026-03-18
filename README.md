@@ -1,6 +1,4 @@
-# flowergail.art
-
-[flowergail.art](https://flowergail.art)
+# [flowergail.art](https://flowergail.art)
 
 An artist portfolio for my lovely partner!
 
