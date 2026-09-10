@@ -2,8 +2,13 @@
 
 An artist portfolio for my lovely partner!
 
+Built over a single not-so-lazy Sunday, I learned two new technologies to bring this website together:
+
 ### Tech
 
-Built with [Astro](https://astro.build) and [Daisy UI](https://daisyui.com/).
+Built with
 
-Deployed on cloudflare pages.
+- [Astro](https://astro.build)
+- [Daisy UI](https://daisyui.com/).
+
+Deployed on Cloudflare Pages.
